@@ -1,1 +1,88 @@
-<mxfile host="app.diagrams.net" modified="2021-02-24T03:29:51.961Z" agent="5.0 (Macintosh)" etag="N74CS9mjlYcwqP-HYfUW" version="14.2.9" type="github"><diagram id="zMYpCoSei2aacMe3c_rN" name="Page-1">7Ztfd6I4FMA/jY+zB0HQPiJG5YyiR7DtPFJNkRGNi7HqfvpNIPwz0TqzlHZH6zlKbhIC+d1c7r2hNcVYHXqhu1kM0RwGNVmaH2pKpybLdfmhRX6o5BhLWg0lFnihP2eNMoHt/wOZUGLSnT+H20JDjFCA/U1ROEPrNZzhgswNQ7QvNntFQXHUjetBTmDP3ICXPvlzvGB3oUqZvA99b5GMXJdYzYs7W3oh2q3ZeDVZaUtAAVpcvXKTc7H224U7R/ucSAE1xQgRwvHR6mDAgM5tMm1xv+6Z2vS6Q7jG13TAy+3POe4clsPtq/dsTVxrtfrGzvLmBjs2H7pNynotvWp8TGYquldIzybVlPZ+4WNob9wZrd0T3SCyBV4FpFQnh69+EBgoQGHUV+lKLdCi8i0O0RLma6I/2gOtcU5e1+mHybvuyg+oghloF/owJBdmQTKXbX4SkjuCIYaHnIhNSg+iFcThkTRhtakmHlPCcXmfqUNdYbJFThU0JnOZBnrpqTMK5ICB+AUoMgfFJMUn3XJulYncUD+ZicoxsUek7PT1m4WiNAULRa4SSpODUpM1d0VnOCBjt9vAAl3TSYUeTmfiz8elaOoXw1VXBLxOYJCn5IYebv21F0CdPuDJdMz9kDz7fbSmNWhHL//PAaWerCv1gQelCTilnkj5oB5ECytaUnP/jY4Y+N46qtD+3lEHpj0j90+nJSmTI7ba8gvSHg0B6T6eAGNkdUzHHFmnizMehlx2NJJWwpLdLiGeLVjbC/jPKMxF/Od0JpkgNi3lLGi1qCeNlmBBNwSK0vowR0V6xwAz3r2RPijTCH8G0Q+wyEKvplKLLPP+fxGg82NMAY665Gtqg8mdIkdRGC9US5EPGIoUSR2NIDrUY2VLUjdExvcWcapFnJr06eEf7yY99YF1k3ROYw4hnWoXW4Oj0zMf73jOuyTV4uEDdaEtBM9jYDiZPZwAezooNVL8nyJVtCLS5uevOI1D6tzt4ZehwydhqKNo3yQetVXEI/QNRSFa2rB8Pi2RQcxi+TjCNiZAd6gddEzjO3DOheFcP4e6lD3aQeqDwbhGVS9u9BKednv3ZNd3vasWMdTyX4LwUaxcadPS1UtROBpw7kGbFVGIF8hDazcAmbQ924VvKa4MHkcn6z1AaMNa/IQYH9k+orvDqEgXHnz8TLuTO45LP3I1nQM7c1Q4nlOCeksGdA5+D3bgvsCgne4O5pqw/cEL+rAlY8zgFeYWu6EH8RUNKY2L+hXCwMX+W3E7tHw9EaUUTxTnnvsVOtDV5n4TA3IHdRGU6MleMShR7u4O6hSUKMlaMShReu4O6hSUaH+yWlAqD4pEMo+mkXeMpaFu6T2aCb9BJ/R0C0pgBOUkPV7Naxm8W+H0KS7Ttqf019At8t1mKZ7R4BF0bpLcafiQpnneCx4ePgpd8/78usYsijI81ZrFpui1jTgup5NBal5dFrMku//FeeFeCoh3Etna1G3b7Fl5CxslFTpgrE+cIbDyyYh4vC+SBahopTauXampsHwNECbV/4sGJObZpG+bjqeUuhkpA8WvtwfgvUzSLWqCdm028eNeuONT8eWYgqfRdEA6STaIfK1+wePSx2Og01YjK60cmLZTlAz1SIPGxDnLKc+NqopwX0BoNNRf1xVSzF5bj+py/xuggH8B</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-02-24T03:45:30.805Z" agent="5.0 (Macintosh)" etag="gtgluk9rzTLqSxmWi9Yu" version="14.2.9" type="github">
+  <diagram id="zMYpCoSei2aacMe3c_rN" name="Page-1">
+    <mxGraphModel dx="1298" dy="843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#B0E3E6" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-1" value="AS A " style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F08E81;strokeColor=#FFFFFF;fontColor=#1A1A1A;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="210" y="110" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-2" value="I WANT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F08E81;strokeColor=#FFFFFF;fontColor=#1A1A1A;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="210" y="245" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-5" value="SO THAT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F08E81;strokeColor=#FFFFFF;fontColor=#1A1A1A;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="210" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-7" value="&amp;lt;BENEFIT&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F08E81;strokeColor=#FFFFFF;fontColor=#1A1A1A;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="365" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-13" value="" style="shape=singleArrow;direction=south;whiteSpace=wrap;html=1;fillColor=#F08E81;strokeColor=#FFFFFF;fontColor=#1A1A1A;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="510" y="590" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-19" value="&lt;div align=&quot;center&quot;&gt;&amp;lt;SOME PRECONDITION&amp;gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;align=center;" parent="1" vertex="1">
+          <mxGeometry x="350" y="480" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-20" value="&amp;lt;SOME GOAL&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="365" y="245" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-21" value="&amp;lt;TYPE OF USER&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="365" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-22" value="&amp;lt; I DO SOME ACTION&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="355" y="600" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-23" value="WHEN" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="210" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-24" value="GIVEN" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="210" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-25" value="&amp;lt; I EXPECT SOME RESULT&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="360" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-26" value="THEN" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="210" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-27" value="USERS" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="580" y="110" width="140" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-28" value="&lt;div&gt;CREATE TICKET&lt;/div&gt;&lt;div&gt;TO GET HELP &lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="580" y="232.5" width="140" height="112.5" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-33" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#182E3E;fontFamily=Courier New;fontColor=#1A1A1A;labelBackgroundColor=#B0E3E6;" parent="1" source="tksjdtDxkMsfgXNRaNmm-27" target="tksjdtDxkMsfgXNRaNmm-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-39" value="" style="shape=singleArrow;direction=south;whiteSpace=wrap;html=1;fillColor=#F08E81;strokeColor=#FFFFFF;fontColor=#1A1A1A;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="510" y="480" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-40" value="" style="shape=singleArrow;direction=south;whiteSpace=wrap;html=1;fillColor=#F08E81;strokeColor=#FFFFFF;fontColor=#1A1A1A;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="510" y="110" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-41" value="" style="shape=singleArrow;direction=south;whiteSpace=wrap;html=1;fillColor=#F08E81;strokeColor=#FFFFFF;fontColor=#1A1A1A;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="510" y="245" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-42" value="" style="shape=singleArrow;direction=south;whiteSpace=wrap;html=1;fillColor=#F08E81;strokeColor=#FFFFFF;fontColor=#1A1A1A;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="510" y="370" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-52" value="SERVICE TICKET MANAGER" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="350" y="10" width="265" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-59" value="THE ISSUE CAN BE RESOLVED" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontFamily=Courier New;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="580" y="360" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-71" value="" style="shape=singleArrow;direction=south;whiteSpace=wrap;html=1;fillColor=#F08E81;strokeColor=#FFFFFF;fontColor=#1A1A1A;fontFamily=Courier New;" parent="1" vertex="1">
+          <mxGeometry x="510" y="700" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-73" value="&lt;font face=&quot;Courier New&quot;&gt;USER CAN ASSIGN TICKET TO DEPARTMENT&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="580" y="460" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-75" value="&lt;font face=&quot;Courier New&quot;&gt;ISSUE IS PUT IN A TABLE &lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="580" y="610" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tksjdtDxkMsfgXNRaNmm-76" value="&lt;font face=&quot;Courier New&quot;&gt;USER WOULD SEE THE TICKET APPEAR ON THE LIST ON THE MAIN PAGE &lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#FFFFFF;fillColor=#F08E81;fontColor=#1A1A1A;" parent="1" vertex="1">
+          <mxGeometry x="580" y="700" width="140" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
