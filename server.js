@@ -16,7 +16,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sess = {
     secret: process.env.SESSION_SECRET,
     // cookie: { expires: 10 * 60 * 1000 },
-    cookie: { },
+    cookie: {},
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({ db: sequelize })
@@ -37,4 +37,4 @@ app.use(require('./controllers/'));
 sequelize.sync({ force: false })
     .then(() => {
         app.listen(PORT, () => console.log('Now listening'));
-});
+    });
