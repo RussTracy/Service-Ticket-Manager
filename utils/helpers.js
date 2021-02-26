@@ -5,7 +5,7 @@ module.exports = {
     let now  = moment();
     let diff = moment(now,"DD/MM/YYYY HH:mm:ss").diff(moment(date,"DD/MM/YYYY HH:mm:ss"));
     let duration = moment.duration(diff);
-    var timeLaps = Math.floor(duration.asHours()) + 'h';
+    let timeLaps = Math.floor(duration.asHours()) + 'h';
 
     return `${timeLaps}`;
   }
