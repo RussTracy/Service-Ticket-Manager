@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Ticket, Department, Status, User } = require('../models');
+const { Ticket, Department, Status, User, Priority } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts for dashboard

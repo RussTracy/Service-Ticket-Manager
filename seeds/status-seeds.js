@@ -3,16 +3,16 @@ const { Status } = require('../models');
 
 const statusdata = [
     {
-        status_type: 'Open',
+        status_type: 'New',
     },
     {
-        status_type: 'Closed',
-    },
-    {
-        status_type: 'Assigned',
+        status_type: 'Pending',
     },
     {
         status_type: 'Processing',
+    },
+    {
+        status_type: 'Solved',
     }
 ];
 

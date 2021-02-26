@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
-const { Ticket, Department, Status, User } = require('../../models');
+const { Ticket, Department, Status, User, Priority } = require('../../models');
 
 router.get('/', (req, res) => {
     Ticket.findAll({
@@ -27,6 +27,14 @@ router.get('/:id', (req, res) => {
             {
                 model: Status,
                 attributes: ['status_type']
+            },
+            {
+                model: Priority,
+                attributes: ['priority']
+            },
+            {
+                model: User,
+                attributes: ['username']
             }
         ]
     })
@@ -48,9 +56,11 @@ router.post('/', withAuth, (req, res) => {
         Ticket.create({
             title: req.body.title,
             description: req.body.description,
-            user_id: req.body.user_id,
+            //user_id: req.body.user_id,
+            user_id: req.session.user_id, // Get user id from session variables
             department_id: req.body.department_id,
-            status_id: req.body.status_id
+            status_id: req.body.status_id,
+            priority_id: req.body.priority_id
         })
             .then(dbTicketData => res.json(dbTicketData))
             .catch(err => {

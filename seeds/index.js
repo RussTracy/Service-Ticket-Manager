@@ -2,8 +2,9 @@ const seedUsers = require('./user-seeds');
 const seedDepartments = require('./department-seeds');
 const seedStatuses = require('./status-seeds');
 const seedTickets = require('./ticket-seeds');
-
+const seedPriorities = require('./priority-seeds');
 const sequelize = require('../config/connection');
+
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
@@ -16,6 +17,9 @@ const seedAll = async () => {
     console.log('--------------');
 
     await seedStatuses();
+    console.log('--------------');
+
+    await seedPriorities();
     console.log('--------------');
 
     await seedTickets();
