@@ -1,8 +1,43 @@
 const router = require('express').Router();
+const { Ticket, Department, Status, User } = require('../models');
 
-// get all posts for homepage
+
+// get all tickets for homepage
 router.get('/', (req, res) => {
-  res.render('homepage', { loggedIn: req.session.loggedIn });
+  Ticket.findAll({
+      attributes: [
+        'id',
+        'title',
+        'description',
+        'user_id',
+        'department_id',
+        'status_id',
+        'created_at'
+      ],
+      include: [
+        {
+          model: User,
+          attributes: ['username']
+        },
+        {
+          model: Status,
+          attributes: ['status_type']
+        }],
+    })
+    .then(dbTicketData => {
+      const tickets = dbTicketData.map(ticket => ticket.get({
+        plain: true
+      }));
+
+      res.render('homepage', {
+        tickets,
+        loggedIn: req.session.loggedIn
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 router.get('/login', (req, res) => {
