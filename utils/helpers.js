@@ -1,22 +1,12 @@
+const moment = require('moment');
+
 module.exports = {
   format_date: date => {
-    return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
-      date
-    ).getFullYear()}`;
-  },
-  format_url: url => {
-    return url
-      .replace('http://', '')
-      .replace('https://', '')
-      .replace('www.', '')
-      .split('/')[0]
-      .split('?')[0];
-  },
-  format_plural: (word, amount) => {
-    if (amount !== 1) {
-      return `${word}s`;
-    }
+    let now  = moment();
+    let diff = moment(now,"DD/MM/YYYY HH:mm:ss").diff(moment(date,"DD/MM/YYYY HH:mm:ss"));
+    let duration = moment.duration(diff);
+    let timeLaps = Math.floor(duration.asHours()) + 'h';
 
-    return word;
+    return `${timeLaps}`;
   }
 };
