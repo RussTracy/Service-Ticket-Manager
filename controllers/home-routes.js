@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Ticket, Department, Status, User } = require('../models');
 
-
 // get all tickets for homepage
 router.get('/', (req, res) => {
   Ticket.findAll({
@@ -22,17 +21,16 @@ router.get('/', (req, res) => {
         {
           model: Status,
           attributes: ['status_type']
+        },
+        {
+          model: Department,
+          attributes: ['department_name']
         }],
     })
     .then(dbTicketData => {
-      const tickets = dbTicketData.map(ticket => ticket.get({
-        plain: true
-      }));
+      const tickets = dbTicketData.map(ticket => ticket.get({ plain: true }));
 
-      res.render('homepage', {
-        tickets,
-        loggedIn: req.session.loggedIn
-      });
+      res.render('homepage', { tickets, loggedIn: req.session.loggedIn });
     })
     .catch(err => {
       console.log(err);
@@ -41,10 +39,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
+  if (req.session.loggedIn) { res.redirect('/'); return; }
 
   res.render('login');
 });

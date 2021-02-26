@@ -1,10 +1,11 @@
 const router = require('express').Router();
-// const { Post, User, Comment } = require('../models');
+const { Ticket, Department, Status, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
 router.get('/', withAuth, (req, res) => {
-  res.render('dashboard', { posts, loggedIn: true });
+  // res.render('dashboard', { tickets, loggedIn: true });
+  res.render('dashboard', { loggedIn: true });
 });
 
 module.exports = router;
