@@ -2,7 +2,9 @@
     <div class="card-body">
         <div class="d-flex justify-content-between">
             <h5 class="w-75 card-title fw-bold">{{title}}</h5>
-            <h6 class="flex-shrink-1 text-end">{{format_date created_at}}</h6>
+            <h6 class="flex-shrink-1 text-end my-auto badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="Time Elapesed">
+                {{format_date created_at}}
+            </h6>
         </div>
         <p class="card-text">{{description}}</p>
     </div>
@@ -19,7 +21,7 @@
             <br>
             <span>{{department.department_name}}</span>
         </div>
-        <div class="p-2 flex-shrink-1 m-auto">
+        <div class="p-2 flex-shrink-1 m-auto" data-toggle="tooltip" data-placement="top" title="{{priority.priority}}">
             {{#ifEquals priority.priority "Urgent"}} <span class="dot" style="background-color: red;"></span>{{/ifEquals}}
             {{#ifEquals priority.priority "High"}} <span class="dot" style="background-color: orange;"></span>{{/ifEquals}}
             {{#ifEquals priority.priority "Medium"}} <span class="dot" style="background-color: yellow;"></span>{{/ifEquals}}
