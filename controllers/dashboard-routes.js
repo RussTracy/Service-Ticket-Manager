@@ -31,6 +31,7 @@ router.get('/', withAuth, (req, res) => {
         model: Department,
         attributes: ['department_name']
       }],
+      where:{user_id:req.session.user_id}
   })
     .then(dbTicketData => {
       const tickets = dbTicketData.map(ticket => ticket.get({ plain: true }));
