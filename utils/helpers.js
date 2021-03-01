@@ -11,5 +11,10 @@ module.exports = {
   },
   ifEquals: function(arg1, arg2, options) {
     return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
-  } 
+  },
+  titleCase: function(str) {
+    return str.toLowerCase().split(' ').map(function(word) {
+      return word.replace(word[0], word[0].toUpperCase());
+    }).join(' ');
+  }
 };

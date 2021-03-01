@@ -1,5 +1,5 @@
 <div>
-    <h1>Dashboard</h1>
+    <h3 class="m-3">Welcome {{titleCase userName}} to your personal Dashboard</h3>
 
     <section>
         <!-- Button trigger modal -->
@@ -62,10 +62,75 @@
         </div>
     </section>
 
-    {{#each tickets as |ticket| }}
-    {{> ticket-cards ticket}}
-    {{/each}}
-
+    <div class="col-12 d-flex flex-column">
+        <div class="m-3 row justify-content-around">
+            <!-- New start -->
+            <div class="col-12 col-md-6 col-xl-3 mb-3">
+                <div class="card" id="new" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h5 class="card-header bg-dark text-light">
+                        New
+                    </h5>
+                    <div class="ticket-container">
+                        {{#each tickets as |ticket| }}
+                        {{#ifEquals status.status_type "New"}}
+                        {{> ticket-cards ticket}}
+                        {{/ifEquals}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!-- New end -->
+            <!-- in Pending start -->
+            <div class="col-12 col-md-6 col-xl-3 mb-3">
+                <div class="card" id="Pending" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h5 class="card-header bg-dark text-light">
+                        Pending
+                    </h5>
+                    <div class="ticket-container">
+                        {{#each tickets as |ticket| }}
+                        {{#ifEquals status.status_type "Pending"}}
+                        {{> ticket-cards ticket}}
+                        {{/ifEquals}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!-- in Pending end -->
+            <!-- in Processing start -->
+            <div class="col-12 col-md-6 col-xl-3 mb-3">
+                <div class="card" id="Processing" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h5 class="card-header bg-dark text-light">
+                        Processing
+                    </h5>
+                    <div class="ticket-container">
+                        {{#each tickets as |ticket| }}
+                        {{#ifEquals status.status_type "Processing"}}
+                        {{> ticket-cards ticket}}
+                        {{/ifEquals}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!-- in Processing end -->
+            <!-- Solved start -->
+            <div class="col-12 col-md-6 col-xl-3 mb-3">
+                <div class="card" id="Solved" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h5 class="card-header bg-dark text-light">
+                        Solved
+                    </h5>
+                    <div class="ticket-container">
+                        {{#each tickets as |ticket| }}
+                        {{#ifEquals status.status_type "Solved"}}
+                        {{> ticket-cards ticket}}
+                        {{/ifEquals}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!-- Solved end -->
+        </div>
+    </div>
 </div>
 
 <script src="/javascript/add-ticket.js"></script>
+<script src="/javascript/ticketDragDrop.js"></script>
