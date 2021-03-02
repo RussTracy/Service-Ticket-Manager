@@ -9,7 +9,7 @@
                 <div class="ticket-container">
                     {{#each tickets as |ticket| }}
                         {{#ifEquals status.status_type "New"}}
-                            {{> ticket-cards ticket}}
+                            {{> ticket-cards-homepage ticket}}
                         {{/ifEquals}}
                     {{/each}}
                 </div>
@@ -25,7 +25,7 @@
                 <div class="ticket-container">
                     {{#each tickets as |ticket| }}
                         {{#ifEquals status.status_type "Pending"}}
-                            {{> ticket-cards ticket}}
+                            {{> ticket-cards-homepage ticket}}
                         {{/ifEquals}}
                     {{/each}}
                 </div>
@@ -41,7 +41,7 @@
                 <div class="ticket-container">
                     {{#each tickets as |ticket| }}
                         {{#ifEquals status.status_type "Processing"}}
-                            {{> ticket-cards ticket}}
+                            {{> ticket-cards-homepage ticket}}
                         {{/ifEquals}}
                     {{/each}}
                 </div>
@@ -57,7 +57,7 @@
                 <div class="ticket-container">
                     {{#each tickets as |ticket| }}
                         {{#ifEquals status.status_type "Solved"}}
-                            {{> ticket-cards ticket}}
+                            {{> ticket-cards-homepage ticket}}
                         {{/ifEquals}}
                     {{/each}}
                 </div>

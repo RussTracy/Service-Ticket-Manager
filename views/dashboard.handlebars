@@ -1,66 +1,11 @@
 <div>
     <h3 class="m-3">Welcome {{titleCase userName}} to your personal Dashboard</h3>
 
-    <section>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ticketModal">
-            Create Ticket
-        </button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="ticketModalLabel">New Ticket</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <form class="new-ticket-form">
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="ticket-title" class="col-form-lable">Title</label>
-                                <input type="text" class="form-control" id="ticket-title" name="ticket-title" />
-                            </div>
-                            <div class="form-group">
-                                <label for="ticket-description" class="col-form-lable">Description</label>
-                                <textarea id="ticket-description" class="form-control"
-                                    name="ticket-description"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="ticket-department">Assigned Department</label>
-                                <select class="form-control" id="ticket-department">
-                                    <option></option>
-                                    <option value="1">Human Resources</option>
-                                    <option value="2">Marketing</option>
-                                    <option value="3">Customer Service</option>
-                                    <option value="4">Sales</option>
-                                    <option value="5">Accounting</option>
-                                    <option value="6">Information Technology</option>
-                                    <option value="7">Legal</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="ticket-priority">Priority</label>
-                                <select class="form-control" id="ticket-priority">
-                                    <option></option>
-                                    <option value="1">Urgent</option>
-                                    <option value="2">High</option>
-                                    <option value="3">Medium</option>
-                                    <option value="4">Low</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" id="create" class="btn btn-secondary">Create</button>
-                            <button type="reset" id="close" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ticketModal">
+        Create Ticket
+    </button>
 
     <div class="col-12 d-flex flex-column">
         <div class="m-3 row justify-content-around">
@@ -72,9 +17,9 @@
                     </h5>
                     <div class="ticket-container">
                         {{#each tickets as |ticket| }}
-                        {{#ifEquals status.status_type "New"}}
-                        {{> ticket-cards ticket}}
-                        {{/ifEquals}}
+                            {{#ifEquals status.status_type "New"}}
+                                {{> ticket-cards-dashboard ticket}}
+                            {{/ifEquals}}
                         {{/each}}
                     </div>
                 </div>
@@ -88,9 +33,9 @@
                     </h5>
                     <div class="ticket-container">
                         {{#each tickets as |ticket| }}
-                        {{#ifEquals status.status_type "Pending"}}
-                        {{> ticket-cards ticket}}
-                        {{/ifEquals}}
+                            {{#ifEquals status.status_type "Pending"}}
+                                {{> ticket-cards-dashboard ticket}}
+                            {{/ifEquals}}
                         {{/each}}
                     </div>
                 </div>
@@ -104,9 +49,9 @@
                     </h5>
                     <div class="ticket-container">
                         {{#each tickets as |ticket| }}
-                        {{#ifEquals status.status_type "Processing"}}
-                        {{> ticket-cards ticket}}
-                        {{/ifEquals}}
+                            {{#ifEquals status.status_type "Processing"}}
+                                {{> ticket-cards-dashboard ticket}}
+                            {{/ifEquals}}
                         {{/each}}
                     </div>
                 </div>
@@ -120,14 +65,67 @@
                     </h5>
                     <div class="ticket-container">
                         {{#each tickets as |ticket| }}
-                        {{#ifEquals status.status_type "Solved"}}
-                        {{> ticket-cards ticket}}
-                        {{/ifEquals}}
+                            {{#ifEquals status.status_type "Solved"}}
+                                {{> ticket-cards-dashboard ticket}}
+                            {{/ifEquals}}
                         {{/each}}
                     </div>
                 </div>
             </div>
             <!-- Solved end -->
+        </div>
+    </div>
+</div>
+
+<!-- Create Ticket Modal -->
+<div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ticketModalLabel">New Ticket</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form class="new-ticket-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="ticket-title" class="col-form-lable">Title</label>
+                        <input type="text" class="form-control" id="ticket-title" name="ticket-title" />
+                    </div>
+                    <div class="form-group">
+                        <label for="ticket-description" class="col-form-lable">Description</label>
+                        <textarea id="ticket-description" class="form-control" name="ticket-description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="ticket-department">Assigned Department</label>
+                        <select class="form-control" id="ticket-department">
+                            <option></option>
+                            <option value="1">Human Resources</option>
+                            <option value="2">Marketing</option>
+                            <option value="3">Customer Service</option>
+                            <option value="4">Sales</option>
+                            <option value="5">Accounting</option>
+                            <option value="6">Information Technology</option>
+                            <option value="7">Legal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ticket-priority">Priority</label>
+                        <select class="form-control" id="ticket-priority">
+                            <option></option>
+                            <option value="1">Urgent</option>
+                            <option value="2">High</option>
+                            <option value="3">Medium</option>
+                            <option value="4">Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="create" class="btn btn-secondary">Create</button>
+                    <button type="reset" id="close" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
