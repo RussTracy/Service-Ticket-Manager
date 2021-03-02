@@ -25,11 +25,11 @@ router.get('/', withAuth, (req, res) => {
       },
       {
         model: Priority,
-        attributes: ['priority']
+        attributes: ['priority', 'id']
       },
       {
         model: Department,
-        attributes: ['department_name']
+        attributes: ['department_name', 'id']
       }],
       where:{user_id:req.session.user_id}
   })

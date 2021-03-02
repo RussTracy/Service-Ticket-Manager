@@ -22,15 +22,15 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Department,
-                attributes: ['department_name']
+                attributes: ['department_name', 'id']
             },
             {
                 model: Status,
-                attributes: ['status_type']
+                attributes: ['status_type', 'id']
             },
             {
                 model: Priority,
-                attributes: ['priority']
+                attributes: ['priority', 'id']
             },
             {
                 model: User,
@@ -56,7 +56,6 @@ router.post('/', withAuth, (req, res) => {
         Ticket.create({
             title: req.body.title,
             description: req.body.description,
-            //user_id: req.body.user_id,
             user_id: req.session.user_id, // Get user id from session variables
             department_id: req.body.department_id,
             status_id: req.body.status_id,
@@ -68,6 +67,25 @@ router.post('/', withAuth, (req, res) => {
                 res.status(400).json(err);
             });
     }
+});
+
+router.put('/:id', withAuth, (req, res) => {
+    Ticket.update({
+        title: req.body.title,
+        description: req.body.description,
+        department_id: req.body.department_id,
+        priority_id: req.body.priority_id,
+        status_id: req.body.status_id
+    }, {
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbTicketData => res.json(dbTicketData))
+        .catch(err => {
+            console.log(err);
+            res.status(400).json(err);
+        });
 });
 
 router.delete('/:id', withAuth, (req, res) => {
