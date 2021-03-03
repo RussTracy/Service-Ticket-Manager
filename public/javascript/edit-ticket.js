@@ -7,8 +7,6 @@ async function editTicketHandler(event) {
     const priority_id = document.querySelector('select[id="edit-ticket-priority"]').value;
     const status_id = document.querySelector('select[id="edit-ticket-status"]').value;
     const ticket_id = $('.editBtn').attr('id');
-    console.log(ticket_id);
-    console.log(event);
 
     const response = await fetch(`/api/tickets/${ticket_id}`, {
         method: 'PUT',

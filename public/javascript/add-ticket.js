@@ -7,7 +7,6 @@ async function newTicketHandler(event) {
     const priority_id = document.querySelector('select[id="ticket-priority"]').value;
     const status_id = 1;
 
-
     const response = await fetch(`/api/tickets`, {
         method: 'POST',
         body: JSON.stringify({
