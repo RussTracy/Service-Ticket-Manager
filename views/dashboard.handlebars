@@ -1,0 +1,191 @@
+<div>
+    <h3 class="m-3">Welcome {{titleCase userName}} to your personal Dashboard!</h3>
+    <div class="col-12 d-flex flex-column">
+        <div class="m-3 row justify-content-around">
+            <!-- New start -->
+            <div class="col-12 col-md-6 col-xl-3 mb-3">
+                <div class="card" id="1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h5 class="card-header bg-dark text-light">
+                        New
+                    </h5>
+                    <div class="ticket-container">
+                        {{#each tickets as |ticket| }}
+                            {{#ifEquals status.status_type "New"}}
+                                {{> ticket-cards-dashboard ticket}}
+                            {{/ifEquals}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!-- New end -->
+            <!-- in Pending start -->
+            <div class="col-12 col-md-6 col-xl-3 mb-3">
+                <div class="card" id="2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h5 class="card-header bg-dark text-light">
+                        Pending
+                    </h5>
+                    <div class="ticket-container">
+                        {{#each tickets as |ticket| }}
+                            {{#ifEquals status.status_type "Pending"}}
+                                {{> ticket-cards-dashboard ticket}}
+                            {{/ifEquals}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!-- in Pending end -->
+            <!-- in Processing start -->
+            <div class="col-12 col-md-6 col-xl-3 mb-3">
+                <div class="card" id="3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h5 class="card-header bg-dark text-light">
+                        Processing
+                    </h5>
+                    <div class="ticket-container">
+                        {{#each tickets as |ticket| }}
+                            {{#ifEquals status.status_type "Processing"}}
+                                {{> ticket-cards-dashboard ticket}}
+                            {{/ifEquals}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!-- in Processing end -->
+            <!-- Solved start -->
+            <div class="col-12 col-md-6 col-xl-3 mb-3">
+                <div class="card" id="4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h5 class="card-header bg-dark text-light">
+                        Solved
+                    </h5>
+                    <div class="ticket-container">
+                        {{#each tickets as |ticket| }}
+                            {{#ifEquals status.status_type "Solved"}}
+                                {{> ticket-cards-dashboard ticket}}
+                            {{/ifEquals}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!-- Solved end -->
+        </div>
+    </div>
+</div>
+
+<!-- Create Ticket Modal -->
+<div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ticketModalLabel">New Ticket</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form class="new-ticket-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="ticket-title" class="col-form-lable">Title</label>
+                        <input type="text" class="form-control" id="ticket-title" name="ticket-title" />
+                    </div>
+                    <div class="form-group">
+                        <label for="ticket-description" class="col-form-lable">Description</label>
+                        <textarea id="ticket-description" class="form-control" name="ticket-description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="ticket-department">Assigned Department</label>
+                        <select class="form-control" id="ticket-department">
+                            <option></option>
+                            <option value="1">Human Resources</option>
+                            <option value="2">Marketing</option>
+                            <option value="3">Customer Service</option>
+                            <option value="4">Sales</option>
+                            <option value="5">Accounting</option>
+                            <option value="6">Information Technology</option>
+                            <option value="7">Legal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ticket-priority">Priority</label>
+                        <select class="form-control" id="ticket-priority">
+                            <option></option>
+                            <option value="1">Urgent</option>
+                            <option value="2">High</option>
+                            <option value="3">Medium</option>
+                            <option value="4">Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="create" class="btn btn-secondary">Create</button>
+                    <button type="reset" id="close" class="btn btn-primary" da data-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Ticket Modal -->
+<div class="modal fade" id="editTicketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ticketModalLabel">Edit Ticket</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form class="edit-ticket-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="edit-ticket-title" class="col-form-lable">Title</label>
+                        <input type="text" class="form-control" id="edit-ticket-title" name="edit-ticket-title"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-ticket-description" class="col-form-lable">Description</label>
+                        <textarea id="edit-ticket-description" class="form-control" name="edit-ticket-description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-ticket-department">Assigned Department</label>
+                        <select class="form-control" id="edit-ticket-department">
+                            <option></option>
+                            <option value="1">Human Resources</option>
+                            <option value="2">Marketing</option>
+                            <option value="3">Customer Service</option>
+                            <option value="4">Sales</option>
+                            <option value="5">Accounting</option>
+                            <option value="6">Information Technology</option>
+                            <option value="7">Legal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-ticket-priority">Priority</label>
+                        <select class="form-control" id="edit-ticket-priority">
+                            <option></option>
+                            <option value="1">Urgent</option>
+                            <option value="2">High</option>
+                            <option value="3">Medium</option>
+                            <option value="4">Low</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-ticket-status">Priority</label>
+                        <select class="form-control" id="edit-ticket-status">
+                            <option></option>
+                            <option value="1">New</option>
+                            <option value="2">Pending</option>
+                            <option value="3">Processing</option>
+                            <option value="4">Solved</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary editBtn">Edit</button>
+                    <button type="reset" id="editClose" class="btn btn-primary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/javascript/add-ticket.js"></script>
+<script src="/javascript/edit-ticket.js"></script>
+<script src="/javascript/ticketDragDrop.js"></script>

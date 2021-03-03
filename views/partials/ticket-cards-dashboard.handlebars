@@ -1,0 +1,31 @@
+<div class="card m-3 service-ticket" id="{{id}}" draggable="true" ondragstart="drag(event)" onclick="editTicket(this)">
+    <div class="card-body">
+        <div class="d-flex justify-content-between">
+            <h5 class="w-75 card-title fw-bold">{{title}}</h5>
+            <h6 class="flex-shrink-1 text-end my-auto badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="Time Elapesed">
+                {{format_date created_at}}
+            </h6>
+        </div>
+        <p class="card-text">{{description}}</p>
+    </div>
+    <div class="d-flex border-top border-dark bg-light">
+        <div class="p-2 w-25 m-auto status-flag"
+            {{#ifEquals status.status_type "New"}} style="background-color: #0050EF;"{{/ifEquals}}
+            {{#ifEquals status.status_type "Pending"}} style="background-color: #FA6800;"{{/ifEquals}}
+            {{#ifEquals status.status_type "Processing"}} style="background-color: #FFCD28;"{{/ifEquals}}
+            {{#ifEquals status.status_type "Solved"}} style="background-color: #60A917;"{{/ifEquals}}
+            >{{status.status_type}}
+        </div>
+        <div class="p-2 w-75 text-center">
+            <span class="fw-light">Assigned to</span>
+            <br>
+            <span>{{department.department_name}}</span>
+        </div>
+        <div class="p-2 flex-shrink-1 m-auto" data-toggle="tooltip" data-placement="top" title="{{priority.priority}}">
+            {{#ifEquals priority.priority "Urgent"}} <span class="dot" style="background-color: red;"></span>{{/ifEquals}}
+            {{#ifEquals priority.priority "High"}} <span class="dot" style="background-color: orange;"></span>{{/ifEquals}}
+            {{#ifEquals priority.priority "Medium"}} <span class="dot" style="background-color: yellow;"></span>{{/ifEquals}}
+            {{#ifEquals priority.priority "Low"}} <span class="dot" style="background-color: green;"></span>{{/ifEquals}}
+        </div>
+    </div>
+</div>
