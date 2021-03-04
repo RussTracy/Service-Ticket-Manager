@@ -87,7 +87,8 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="create-ticket-title" class="col-form-lable">Title</label>
-                        <input type="text" class="form-control" id="create-ticket-title" required minlength="5" />
+                        <input type="text" class="form-control" id="create-ticket-title"
+                            placeholder="Enter Ticket Title" required minlength="5" />
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -97,7 +98,8 @@
                     </div>
                     <div class="form-group">
                         <label for="create-ticket-description" class="col-form-lable">Description</label>
-                        <textarea id="create-ticket-description" class="form-control" required minlength="5"></textarea>
+                        <textarea id="create-ticket-description" class="form-control"
+                            placeholder="Enter Ticket Description" required minlength="5"></textarea>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -108,14 +110,10 @@
                     <div class="form-group">
                         <label for="create-ticket-department">Assigned Department</label>
                         <select class="form-control" id="create-ticket-department" required>
-                            <option></option>
-                            <option value="1">Human Resources</option>
-                            <option value="2">Marketing</option>
-                            <option value="3">Customer Service</option>
-                            <option value="4">Sales</option>
-                            <option value="5">Accounting</option>
-                            <option value="6">Information Technology</option>
-                            <option value="7">Legal</option>
+                            <option value="" disabled selected>Select Department</option>
+                            {{#each departments as |department|}}
+                            <option value="{{department.id}}">{{department.department_name}}</option>
+                            {{/each}}
                         </select>
                         <div class="valid-feedback">
                             Looks good!
@@ -126,12 +124,11 @@
                     </div>
                     <div class="form-group">
                         <label for="create-ticket-priority">Priority</label>
-                        <select class="form-control" id="create-ticket-priority" required>
-                            <option></option>
-                            <option value="1">Urgent</option>
-                            <option value="2">High</option>
-                            <option value="3">Medium</option>
-                            <option value="4">Low</option>
+                        <select class="form-control" id="create-ticket-priority" placeholder="test" required>
+                            <option value="" disabled selected>Select Priority</option>
+                            {{#each priorities as |priority|}}
+                            <option value="{{priority.id}}">{{priority.priority}}</option>
+                            {{/each}}
                         </select>
                         <div class="valid-feedback">
                             Looks good!
@@ -164,7 +161,8 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="edit-ticket-title" class="col-form-lable">Title</label>
-                        <input type="text" class="form-control" id="edit-ticket-title" required minlength="5" />
+                        <input type="text" class="form-control" id="edit-ticket-title" placeholder="Enter Ticket Title"
+                            required minlength="5" />
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -174,7 +172,8 @@
                     </div>
                     <div class="form-group">
                         <label for="edit-ticket-description" class="col-form-lable">Description</label>
-                        <textarea id="edit-ticket-description" class="form-control" required minlength="5"></textarea>
+                        <textarea id="edit-ticket-description" class="form-control"
+                            placeholder="Enter Ticket Description" required minlength="5"></textarea>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -185,14 +184,9 @@
                     <div class="form-group">
                         <label for="edit-ticket-department">Assigned Department</label>
                         <select class="form-control" id="edit-ticket-department" required>
-                            <option></option>
-                            <option value="1">Human Resources</option>
-                            <option value="2">Marketing</option>
-                            <option value="3">Customer Service</option>
-                            <option value="4">Sales</option>
-                            <option value="5">Accounting</option>
-                            <option value="6">Information Technology</option>
-                            <option value="7">Legal</option>
+                            {{#each departments as |department|}}
+                            <option value="{{department.id}}">{{department.department_name}}</option>
+                            {{/each}}
                         </select>
                         <div class="valid-feedback">
                             Looks good!
@@ -204,11 +198,9 @@
                     <div class="form-group">
                         <label for="edit-ticket-priority">Priority</label>
                         <select class="form-control" id="edit-ticket-priority" required>
-                            <option></option>
-                            <option value="1">Urgent</option>
-                            <option value="2">High</option>
-                            <option value="3">Medium</option>
-                            <option value="4">Low</option>
+                            {{#each priorities as |priority|}}
+                            <option value="{{priority.id}}">{{priority.priority}}</option>
+                            {{/each}}
                         </select>
                         <div class="valid-feedback">
                             Looks good!
@@ -220,7 +212,6 @@
                     <div class="form-group">
                         <label for="edit-ticket-status">Priority</label>
                         <select class="form-control" id="edit-ticket-status" required>
-                            <option></option>
                             <option value="1">New</option>
                             <option value="2">Pending</option>
                             <option value="3">Processing</option>
