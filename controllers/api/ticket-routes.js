@@ -1,6 +1,18 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const { Ticket, Department, Status, User, Priority } = require('../../models');
+require("dotenv").config()
+
+const nodemailer = require("nodemailer");
+const sendgridTransport = require("nodemailer-sendgrid-transport");
+
+const transporter = nodemailer.createTransport(sendgridTransport({
+    auth: {
+        api_key: process.env.SENDGRID_KEY
+    }
+}))
+
+
 
 router.get('/', (req, res) => {
     Ticket.findAll({
@@ -61,7 +73,18 @@ router.post('/', withAuth, (req, res) => {
             status_id: req.body.status_id,
             priority_id: req.body.priority_id
         })
-            .then(dbTicketData => res.json(dbTicketData))
+            .then(dbTicketData => {
+                transporter.sendMail({
+                    to: "6bodaley6@gmail.com",
+                    from: process.env.MYEMAIL,
+                    subject: 'Service-Ticket-Manager-Email',
+                    html: `
+<p>You have created a ticket!</p>
+    `
+                })
+                res.json(dbTicketData)
+
+            })
             .catch(err => {
                 console.log(err);
                 res.status(400).json(err);
