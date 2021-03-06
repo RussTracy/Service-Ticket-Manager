@@ -25,6 +25,9 @@ async function newTicketHandler(event) {
     const department_id = document.querySelector('select[id="create-ticket-department"]').value;
     const priority_id = document.querySelector('select[id="create-ticket-priority"]').value;
     const status_id = 1;
+    const email_id = document.getElementById("create-user-email").value;
+
+    console.log(email_id)
 
     const response = await fetch(`/api/tickets`, {
         method: 'POST',
@@ -33,7 +36,8 @@ async function newTicketHandler(event) {
             description,
             department_id,
             status_id,
-            priority_id
+            priority_id,
+            email_id
         }),
         headers: {
             'Content-Type': 'application/json'

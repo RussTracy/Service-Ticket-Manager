@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Ticket, Department, Status, User, Priority } = require('../models');
+const { Ticket, Department, Status, User, Priority, Email } = require('../models');
 
 // get all tickets for homepage
 router.get('/', (req, res) => {
@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
       'user_id',
       'department_id',
       'status_id',
-      'created_at'
+      'created_at',
+      //!! 'email_id'
     ],
     include: [
       {
@@ -29,7 +30,13 @@ router.get('/', (req, res) => {
       {
         model: Department,
         attributes: ['department_name']
-      }],
+      },
+      //!! {
+      //!!   model: Email,
+      //!!   attributes: ['Email_name']
+      //!! }
+
+    ],
   })
     .then(dbTicketData => {
       const tickets = dbTicketData.map(ticket => ticket.get({ plain: true }));

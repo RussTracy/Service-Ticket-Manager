@@ -58,6 +58,11 @@ Ticket.init(
                 model: 'priority',
                 key: 'id'
             }
+        },
+        //!!added email_id model below
+        email_id: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     },
     {
