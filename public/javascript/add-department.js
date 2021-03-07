@@ -17,23 +17,15 @@
     }, false);
 })();
 
-async function newTicketHandler(event) {
+async function newDepartmentHandler(event) {
     event.preventDefault();
 
-    const title = document.querySelector('input[id="create-ticket-title"]').value;
-    const description = document.querySelector('textarea[id="create-ticket-description"]').value;
-    const department_id = document.querySelector('select[id="create-ticket-department"]').value;
-    const priority_id = document.querySelector('select[id="create-ticket-priority"]').value;
-    const status_id = 1;
+    const department_name = document.querySelector('input[id="create-department-name"]').value;
 
-    const response = await fetch(`/api/tickets`, {
+    const response = await fetch(`/api/departments`, {
         method: 'POST',
         body: JSON.stringify({
-            title,
-            description,
-            department_id,
-            status_id,
-            priority_id
+            department_name,
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -41,7 +33,7 @@ async function newTicketHandler(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/departments');
     }
     else {
         return false;
@@ -49,4 +41,4 @@ async function newTicketHandler(event) {
 }
 
 
-document.querySelector('#create-ticket-form').addEventListener('submit', newTicketHandler);
+document.querySelector('#create-department-form').addEventListener('submit', newDepartmentHandler);
