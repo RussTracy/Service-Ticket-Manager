@@ -7,8 +7,8 @@
         </div>
         <ul class="list-group list-group-flush">
             {{#each departments as |department|}}
-
-            <li class="list-group-item" id="{{department.id}}">{{department.department_name}}</li>
+            <li class="list-group-item"><span>{{department.department_name}}</span><button
+                    class="btn btn-danger btn-sm float-right" type="button" id="{{department.id}}">Delete</button></li>
             {{/each}}
 
         </ul>
