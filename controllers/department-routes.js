@@ -12,7 +12,7 @@ router.get('/', withAuth, (req, res) => {
   })
     .then(dbDepartmentData => {
       const departments = dbDepartmentData.map(department => department.get({ plain: true }));
-      res.render('departments', { departments, loggedIn: req.session.loggedIn, userName: req.session.username, dashboardCard: false });
+      res.render('departments', { departments, loggedIn: req.session.loggedIn, userName: req.session.username, departmentsCard: true });
     })
     .catch(err => {
       console.log(err);

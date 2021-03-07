@@ -15,3 +15,41 @@
     </div>
 
 </div>
+
+<!-- Create Department Modal -->
+<div class="modal fade" id="createDepartmentModal" tabindex="-1" aria-labelledby="departmentModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="departmentModalLabel">New Department</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form class="needs-validation" id="create-department-form" novalidate>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="create-department-name" class="col-form-lable">Department Name</label>
+                        <input type="text" class="form-control" id="create-department-name"
+                            placeholder="Enter Department Name" required minlength="5" />
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a department name more than 5 characters in length.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="create" class="btn btn-secondary">Create</button>
+                    <button type="reset" id="close" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="/javascript/add-departments.js"></script>

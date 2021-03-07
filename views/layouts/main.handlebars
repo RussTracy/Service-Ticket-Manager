@@ -37,6 +37,12 @@
             data-target="#createTicketModal">Create Ticket</button>
         </li>
         {{/if}}
+        {{#if departmentsCard}}
+        <li class="nav-item">
+          <button type="button" class="btn btn-link nounderline" data-toggle="modal"
+            data-target="#createDepartmentModal">Add Department</button>
+        </li>
+        {{/if}}
         {{#if loggedIn}}
         <li class="nav-item">
           <a class="nav-link active" href="/departments">Departments</a>
