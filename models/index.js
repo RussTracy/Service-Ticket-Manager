@@ -3,8 +3,8 @@ const Department = require('./Department');
 const Status = require('./Status');
 const Priority = require('./Priority');
 const Ticket = require('./Ticket');
-//?? const Useremail = require('./userEmail');
-//!!should I add email here??
+const Useremail = require('./userEmail');
+//!!I added email here
 // Create associations
 User.hasMany(Ticket, {
     foreignKey: 'user_id'
@@ -27,8 +27,8 @@ Ticket.belongsTo(Priority, {
 });
 
 //!! added ticket below
-// Ticket.belongsTo(Useremail, {
-//     foreignKey: 'userEmail'
-// })
+Ticket.belongsTo(Useremail, {
+    foreignKey: 'userEmail'
+});
 
-module.exports = { User, Status, Department, Priority, Ticket };
+module.exports = { User, Status, Department, Priority, Ticket, Useremail };

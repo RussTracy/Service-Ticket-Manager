@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
-const { Ticket, Department, Status, User, Priority, } = require('../../models');
+const { Ticket, Department, Status, User, Priority, Useremail } = require('../../models');
 //!! should I make email a model and require?
 require("dotenv").config()
 
@@ -63,7 +63,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/api/dashboard/tickets', withAuth, (req, res) => {
 
     console.log(" hello world ", req.body)
     if (req.session) {
@@ -79,7 +79,7 @@ router.post('/', withAuth, (req, res) => {
             .then(dbTicketData => {
                 console.log(dbTicketData)
                 transporter.sendMail({
-                    to: userEmail,
+                    to: email_id,
                     from: process.env.MYEMAIL,
                     subject: 'Service-Ticket-Manager-Email',
                     html: `

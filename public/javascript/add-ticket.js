@@ -29,7 +29,9 @@ async function newTicketHandler(event) {
 
     console.log(email_id)
 
-    const response = await fetch(`/api/tickets`, {
+
+    //TODO ▼▼I need to find the correct route for the post response getting error in console. Need to find the correct route in the routes folder I think it is in the index.js folders▼▼
+    const response = await fetch(`/dashboard/tickets`, {
         method: 'POST',
         body: JSON.stringify({
             title,
