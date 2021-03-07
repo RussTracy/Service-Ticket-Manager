@@ -3,6 +3,7 @@
 ## Description
 Allow a user to create a ticket to deal with an issue. Have the issue have its own unique list item number that the user can view the status of the issue.
 ## Table Of Contents
+* [Screens](#Screens)
 * [Installation](#installation)
 * [Usage](#Usage)
 * [Credits](#Credits)
