@@ -1,0 +1,17 @@
+<div>
+    <h3 class="m-3">Department Administration</h3>
+
+    <div class="card m-3" style="width: 18rem;">
+        <div class="card-header">
+            Department List
+        </div>
+        <ul class="list-group list-group-flush">
+            {{#each departments as |department|}}
+
+            <li class="list-group-item" id="{{department.id}}">{{department.department_name}}</li>
+            {{/each}}
+
+        </ul>
+    </div>
+
+</div>
