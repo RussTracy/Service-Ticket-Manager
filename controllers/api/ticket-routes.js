@@ -63,7 +63,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/api/dashboard/tickets', withAuth, (req, res) => {
+router.post('/dashboard/tickets', withAuth, (req, res) => {
 
     console.log(" hello world ", req.body)
     if (req.session) {
@@ -79,7 +79,7 @@ router.post('/api/dashboard/tickets', withAuth, (req, res) => {
             .then(dbTicketData => {
                 console.log(dbTicketData)
                 transporter.sendMail({
-                    to: email_id,
+                    to: dbTicketData.email_id,
                     from: process.env.MYEMAIL,
                     subject: 'Service-Ticket-Manager-Email',
                     html: `

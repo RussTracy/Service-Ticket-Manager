@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
       'department_id',
       'status_id',
       'created_at',
-      //!! 'email_id'
+      // 'email_id'
     ],
     include: [
       {
