@@ -7,8 +7,9 @@
         </div>
         <ul class="list-group list-group-flush">
             {{#each departments as |department|}}
-            <li class="list-group-item"><span>{{department.department_name}}</span><button
-                    class="btn btn-danger btn-sm float-right" type="button" id="{{department.id}}">Delete</button></li>
+            <li class="list-group-item">{{department.department_name}}<button
+                    class="btn btn-danger btn-sm float-right delete-department" type="button" id="{{department.id}}"
+                    data-department-id="{{department.id}}">Delete</button></li>
             {{/each}}
 
         </ul>
@@ -53,3 +54,4 @@
 
 
 <script src="/javascript/add-department.js"></script>
+<script src="/javascript/delete-department.js"></script>
