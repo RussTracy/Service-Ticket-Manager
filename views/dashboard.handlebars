@@ -136,7 +136,22 @@
                         <div class="invalid-feedback">
                             Please select an issue priority.
                         </div>
+
+                        <div class="form-group">
+                            <label for="create-user-email" class="col-form-lable">Email</label>
+                            <textarea id="create-user-email" class="form-control"
+                               
+                                value= "hellow" minlength="5">{{userEmail}}
+                                </textarea>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                            Please provide a Email more than 5 characters in length.
+                        </div>
                     </div>
+
+                    {{!-- add email here --}}
                 </div>
                 <div class="modal-footer">
                     <button type="submit" id="create" class="btn btn-secondary">Create</button>

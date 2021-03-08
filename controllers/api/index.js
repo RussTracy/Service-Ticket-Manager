@@ -6,6 +6,7 @@ const statusRoutes = require('./status-routes');
 const priorityRoutes = require('./priority-routes');
 const departmentRoutes = require('./department-routes');
 
+
 router.use('/users', userRoutes);
 router.use('/tickets', ticketRoutes);
 router.use('/statuses', statusRoutes);

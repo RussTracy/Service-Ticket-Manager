@@ -25,15 +25,21 @@ async function newTicketHandler(event) {
     const department_id = document.querySelector('select[id="create-ticket-department"]').value;
     const priority_id = document.querySelector('select[id="create-ticket-priority"]').value;
     const status_id = 1;
+    const email_id = document.querySelector('textarea[id="create-user-email"]').value;
 
-    const response = await fetch(`/api/tickets`, {
+    console.log(email_id)
+
+
+    //TODO ▼▼I need to find the correct route for the post response getting error in console. Need to find the correct route in the routes folder I think it is in the index.js folders▼▼
+    const response = await fetch(`/api/tickets/dashboard/tickets`, {
         method: 'POST',
         body: JSON.stringify({
             title,
             description,
             department_id,
             status_id,
-            priority_id
+            priority_id,
+            email_id
         }),
         headers: {
             'Content-Type': 'application/json'
