@@ -54,7 +54,9 @@ router.get('/', withAuth, (req, res) => {
         }).then(dbDepartmentData => {
           const departments = dbDepartmentData.map(department => department.get({ plain: true }));
           //!! ▼▼▼▼▼▼added the email_id below▼▼▼▼▼
-          res.render('dashboard', { tickets, priorities, departments, loggedIn: req.session.loggedIn, userName: req.session.username, dashboardCard: true });
+          console.log("hello world2e")
+          console.log(req.session)
+          res.render('dashboard', { tickets, priorities, departments, loggedIn: req.session.loggedIn, userName: req.session.username, userEmail: req.session.userEmail, dashboardCard: true });
         })
           // I need to add to email here and render it above
           .catch(err => {
