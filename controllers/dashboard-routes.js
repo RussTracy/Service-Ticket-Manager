@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { Ticket, Department, Status, User, Priority } = require('../models');
 const withAuth = require('../utils/auth');
 
+//?? const email_id = User.email
+//!!▲▲▲adding variable above to hold the email extended from the User class of the model ▲▲▲▲
 // get all posts for dashboard
 router.get('/', withAuth, (req, res) => {
   Ticket.findAll({
@@ -51,9 +53,10 @@ router.get('/', withAuth, (req, res) => {
           ]
         }).then(dbDepartmentData => {
           const departments = dbDepartmentData.map(department => department.get({ plain: true }));
-
+          //!! ▼▼▼▼▼▼added the email_id below▼▼▼▼▼
           res.render('dashboard', { tickets, priorities, departments, loggedIn: req.session.loggedIn, userName: req.session.username, dashboardCard: true });
         })
+          // I need to add to email here and render it above
           .catch(err => {
             console.log(err);
             res.status(500).json(err);
