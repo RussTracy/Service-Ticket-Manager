@@ -1,20 +1,45 @@
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+
+            }, false);
+        });
+    }, false);
+})();
+
 async function newTicketHandler(event) {
     event.preventDefault();
 
-    const title = document.querySelector('input[name="ticket-title"]').value;
-    const description = document.querySelector('textarea[name="ticket-description"]').value;
-    const department_id = document.querySelector('select[id="ticket-department"]').value;
-    const priority_id = document.querySelector('select[id="ticket-priority"]').value;
+    const title = document.querySelector('input[id="create-ticket-title"]').value;
+    const description = document.querySelector('textarea[id="create-ticket-description"]').value;
+    const department_id = document.querySelector('select[id="create-ticket-department"]').value;
+    const priority_id = document.querySelector('select[id="create-ticket-priority"]').value;
     const status_id = 1;
+    const email_id = document.querySelector('textarea[id="create-user-email"]').value;
 
-    const response = await fetch(`/api/tickets`, {
+    console.log(email_id)
+
+
+    //TODO ▼▼I need to find the correct route for the post response getting error in console. Need to find the correct route in the routes folder I think it is in the index.js folders▼▼
+    const response = await fetch(`/api/tickets/dashboard/tickets`, {
         method: 'POST',
         body: JSON.stringify({
             title,
             description,
             department_id,
             status_id,
-            priority_id
+            priority_id,
+            email_id
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -25,17 +50,9 @@ async function newTicketHandler(event) {
         document.location.replace('/dashboard');
     }
     else {
-        alert(response.statusText);
+        return false;
     }
 }
 
 
-function openTheForm() {
-    document.getElementById("popupForm").style.display = "block";
-}
-
-function closeTheForm() {
-    document.getElementById("popupForm").style.display = "none";
-}
-
-document.querySelector('.new-ticket-form').addEventListener('submit', newTicketHandler);
+document.querySelector('#create-ticket-form').addEventListener('submit', newTicketHandler);

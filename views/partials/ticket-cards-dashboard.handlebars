@@ -9,7 +9,7 @@
         <p class="card-text">{{description}}</p>
     </div>
     <div class="d-flex border-top border-dark bg-light">
-        <div class="p-2 w-25 m-auto status-flag"
+        <div class="p-2 m-auto status-flag"
             {{#ifEquals status.status_type "New"}} style="background-color: #0050EF;"{{/ifEquals}}
             {{#ifEquals status.status_type "Pending"}} style="background-color: #FA6800;"{{/ifEquals}}
             {{#ifEquals status.status_type "Processing"}} style="background-color: #FFCD28;"{{/ifEquals}}

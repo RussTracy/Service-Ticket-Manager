@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/6bodaley6/service-ticket-manager"
   },
-  "author": "Bo Daley, Russ Tracy, Matt Damron, Jacob Scholes",
+  "author": "Bo Daley, Russ Tracy, Matt Damron",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/6bodaley6/service-ticket-manager/issues"
@@ -28,6 +28,8 @@
     "express-session": "^1.17.1",
     "moment": "^2.29.1",
     "mysql2": "^2.2.5",
+    "nodemailer": "^6.5.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "sequelize": "^6.5.0"
   },
   "devDependencies": {

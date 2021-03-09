@@ -15,13 +15,16 @@ Ticket.init(
         },
         title: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                len: [5]
+            }
         },
         description: {
             type: DataTypes.TEXT,
             allowNull: false,
             validate: {
-                len: [3]
+                len: [5]
             }
         },
         user_id: {
@@ -55,6 +58,11 @@ Ticket.init(
                 model: 'priority',
                 key: 'id'
             }
+        },
+        //!!added email_id model below
+        email_id: {
+            type: DataTypes.STRING,
+            allowNull: false,
         }
     },
     {

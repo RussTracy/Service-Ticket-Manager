@@ -24,4 +24,27 @@
 
 .status-flag {
   color: white;
+  width: 40px;
+  writing-mode: vertical-rl;
+}
+
+@media screen and (max-width: 1200px) {
+  .status-flag {
+    width: 40%;
+    writing-mode: unset;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .status-flag {
+    width: 25%;
+    writing-mode: unset;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .status-flag {
+    width: 40px;
+    writing-mode: vertical-rl;
+  }
 }
