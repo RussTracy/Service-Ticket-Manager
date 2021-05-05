@@ -9,6 +9,8 @@ Allow a user to create a ticket to deal with an issue. Have the issue have its o
 * [Contributing](#Contributing)
 * [Questions](#Questions)
 * [License](#license)
+## Screenshot
+![alt text](./public/images/ScreenShot.jpg)
 ## Installation
 Deployed at https://service-ticket-manager.herokuapp.com/
 ## License
